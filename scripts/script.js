@@ -17,6 +17,6 @@ messageInput.addEventListener('keydown', function(event) {
 
 function sendMessage(value) {
     let message = document.createElement('p');
-    message.textContent = value;
+    message.textContent = "User: " + value;
     chatroom.appendChild(message);
 }
