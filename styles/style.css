@@ -35,9 +35,7 @@ body {
 
 /* --- Main Content Containers (for Chat, Sign-up, Login) --- */
 /* These containers will take up the available space between the fixed header/footer */
-.chatroom-container,
-.signup-container,
-.login-container {
+.chatroom-container {
   flex-grow: 1; /* Allows these containers to take up all remaining vertical space */
   display: flex; /* Use flexbox to center content inside them */
   justify-content: center; /* Center horizontally */
@@ -47,9 +45,7 @@ body {
 }
 
 /* Adjust top margin for all main content containers to account for the fixed header */
-.chatroom-container,
-.signup-container,
-.login-container {
+.chatroom-container {
   margin-top: 58px; /* Approximate height of titlebar (15+15+25px font size approx 55px + some buffer) */
 }
 
@@ -136,98 +132,7 @@ body {
 }
 
 .messagebar:focus {
-  border-color: #007bff; /* A subtle blue border on focus */
+  border-: #007bff; /* A subtle blue border on focus */
   box-shadow: 0 0 8px rgba(0, 123, 255, 0.7); /* Matching blue glow */
 }
 
-/* --- Form (Sign-up/Login) Styles --- */
-.signup-form,
-.login-form {
-  background-color: #24282b;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-  color: white; /* Ensures labels and text are white */
-}
-
-.signup-form h2,
-.login-form h2 {
-  margin-top: 0;
-  margin-bottom: 25px;
-  color: #fff;
-}
-
-.form-group {
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-/* Styles for all input elements (text, password) EXCEPT the messagebar */
-input:not(.messagebar) {
-  width: 100%;
-  padding: 10px 15px; /* Added horizontal padding */
-  border: 1px solid #3d434a;
-  border-radius: 8px; /* Slightly less rounded than messagebar, or keep 30px if you prefer */
-  background-color: #33383d;
-  color: white;
-  box-sizing: border-box;
-  font-size: 16px; /* Ensure consistent font size */
-  outline: none; /* Remove default outline */
-  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
-
-input:not(.messagebar)::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-input:not(.messagebar):focus {
-  border-color: #007bff;
-  box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);
-}
-
-/* Styles for form buttons */
-.signup-button,
-.login-button {
-  background-color: #007bff; /* Your intended blue color */
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.signup-button:hover,
-.login-button:hover {
-  background-color: #0056b3;
-}
-
-/* Styles for the links at the bottom of forms */
-.signup-link,
-.login-link {
-  margin-top: 20px;
-  font-size: 14px;
-}
-
-.signup-link a,
-.login-link a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.signup-link a:hover,
-.login-link a:hover {
-  text-decoration: underline;
-}
